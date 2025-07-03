@@ -1,0 +1,13 @@
+{
+  "name": "billsio-landing",
+  "version": "1.0.0",
+  "description": "Bills io landing page with Tailwind CSS",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "serve": "python3 -m http.server 8000"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

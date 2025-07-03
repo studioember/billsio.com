@@ -5,144 +5,166 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bills io – Built for the Business of One</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #8fffd0, #50c9e8, #aa7cfb);
-      color: #0c1c2c;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    .container {
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 20px;
-      padding: 2rem;
-      width: 100%;
-      max-width: 420px;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
-    }
-
-    img.logo {
-      border-radius: 12px;
-      width: 64px;
-      margin-bottom: 1.25rem;
-    }
-
-    h1 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
-      color: #3d4852;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-    }
-
-    input[type="email"],
-    button {
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    input[type="email"] {
-      padding: 0.75rem 1rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-
-    textarea {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      resize: vertical;
-      min-height: 100px;
-      margin-bottom: 1rem;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-
-    button {
-      padding: 0.75rem;
-      font-size: 1rem;
-      background-color: rgb(167, 71, 221);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background-color: rgb(136, 40, 191);
-    }
-
-    footer {
-      margin-top: 2rem;
-      font-size: 0.85rem;
-      color: #334155;
-    }
-
-    @media (min-width: 480px) {
-      h1 {
-        font-size: 1.75rem;
-      }
-
-      img.logo {
-        width: 80px;
-      }
-    }
-
-    a {
-      color: #0c1c2c;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.25s;
-    }
-
-    a:hover {
-      color: #ff6b00;
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="./dist/output.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 
-<body>
-  <div class="container">
-    <img src="logo.png" alt="Bills io Logo" class="logo" />
-    <h1>Get Smart About Your Small Business Finances</h1>
-    <p>Bills io is a lightweight finance tool that works with your calendar and email — no banks, no spreadsheets, no
-      bloat. Built for personal finances with powerful tools to power your business of one.</p>
-    <form action="https://formspree.io/f/xvgrlnna" method="POST">
-      <input type="email" name="email" placeholder="Enter your email to get early access" required />
-      <textarea name="message" placeholder="Let us know what you're looking for, or just say hi 👋"></textarea> <button
-        type="submit">Join Waitlist</button>
-    </form>
-    <footer>
-      &copy; 2025 - Bills io
-      <br><br>
-      <a href="https://studioember.com">studio ember</a>
-    </footer>
+<body class="min-h-screen gradient-bg font-inter antialiased">
+  <!-- Background Elements -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-float"></div>
+    <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-float" style="animation-delay: 4s;"></div>
   </div>
+
+  <!-- Main Content -->
+  <div class="relative z-10 min-h-screen flex items-center justify-center p-4 lg:p-8">
+    <div class="w-full max-w-2xl lg:max-w-4xl">
+      <!-- Logo Section -->
+      <div class="text-center mb-8 lg:mb-12 animate-slide-up">
+        <div class="inline-block p-3 lg:p-4 bg-white/20 rounded-2xl backdrop-blur-sm mb-6 animate-glow">
+          <img src="logo.png" alt="Bills io Logo" class="w-16 h-16 lg:w-20 lg:h-20 rounded-xl" />
+        </div>
+      </div>
+
+      <!-- Main Card -->
+      <div class="card-glass p-6 sm:p-8 lg:p-12 animate-fade-in">
+        <!-- Header -->
+        <div class="text-center mb-8 lg:mb-12">
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 lg:mb-6 leading-tight">
+            <span class="bg-gradient-to-r from-brand-600 to-brand-700 bg-clip-text text-transparent">
+              Clarity Without Accounting
+            </span>
+            <br>
+            For Solo Entrepreneurs
+          </h1>
+          <p class="text-gray-600 text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto">
+            Bills io gives freelancers, consultants, and small business owners the financial clarity they need—without the weight of full accounting software. Track income, manage expenses, and get weekly insights through your calendar and email.
+          </p>
+        </div>
+
+        <!-- Content Layout -->
+        <div class="lg:grid lg:grid-cols-2 lg:gap-12 lg:items-start">
+          <!-- Form Section -->
+          <div class="lg:order-2">
+            <form action="https://formspree.io/f/xvgrlnna" method="POST" class="space-y-6">
+              <div class="space-y-4">
+                <div class="relative">
+                  <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="Enter your email to stay updated" 
+                    required 
+                    class="input-field pr-12"
+                    id="email"
+                  />
+                  <div class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                  </div>
+                </div>
+                
+                <div class="relative">
+                  <textarea 
+                    name="message" 
+                    placeholder="What's your biggest challenge with business finances? (Optional)" 
+                    rows="4"
+                    class="input-field resize-none pr-12"
+                    id="message"
+                  ></textarea>
+                  <div class="absolute right-3 top-3 text-gray-400">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-primary w-full group relative overflow-hidden">
+                <span class="relative z-10 flex items-center justify-center gap-2">
+                  <span>Show Interest</span>
+                  <i data-lucide="heart" class="w-5 h-5 transition-transform group-hover:scale-110"></i>
+                </span>
+              </button>
+              
+              <p class="text-sm text-gray-500 text-center">
+                This project is in early development. We'll keep you updated on progress and launch timeline.
+              </p>
+            </form>
+          </div>
+
+          <!-- Features Section -->
+          <div class="lg:order-1 mt-8 lg:mt-0">
+            <div class="mb-6">
+              <h3 class="text-xl lg:text-2xl font-semibold text-gray-900 mb-3">Built for Business Clarity</h3>
+              <p class="text-gray-600">Simple tools that work with your existing workflow</p>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 lg:gap-6 mb-8">
+              <div class="flex flex-col items-center p-4 lg:p-6 rounded-lg bg-gray-50/50 hover:bg-gray-50/70 transition-colors">
+                <i data-lucide="trending-up" class="w-8 h-8 lg:w-10 lg:h-10 text-brand-600 mb-3"></i>
+                <span class="text-sm lg:text-base font-medium text-gray-700 text-center">Income Tracking</span>
+              </div>
+              <div class="flex flex-col items-center p-4 lg:p-6 rounded-lg bg-gray-50/50 hover:bg-gray-50/70 transition-colors">
+                <i data-lucide="receipt" class="w-8 h-8 lg:w-10 lg:h-10 text-brand-600 mb-3"></i>
+                <span class="text-sm lg:text-base font-medium text-gray-700 text-center">Expense Management</span>
+              </div>
+              <div class="flex flex-col items-center p-4 lg:p-6 rounded-lg bg-gray-50/50 hover:bg-gray-50/70 transition-colors">
+                <i data-lucide="calendar-check" class="w-8 h-8 lg:w-10 lg:h-10 text-brand-600 mb-3"></i>
+                <span class="text-sm lg:text-base font-medium text-gray-700 text-center">Weekly Summaries</span>
+              </div>
+              <div class="flex flex-col items-center p-4 lg:p-6 rounded-lg bg-gray-50/50 hover:bg-gray-50/70 transition-colors">
+                <i data-lucide="folder" class="w-8 h-8 lg:w-10 lg:h-10 text-brand-600 mb-3"></i>
+                <span class="text-sm lg:text-base font-medium text-gray-700 text-center">Smart Collections</span>
+              </div>
+            </div>
+            
+            <!-- Value Props -->
+            <div class="space-y-4">
+              <div class="flex items-start gap-4 p-3 rounded-lg bg-white/50">
+                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <span class="text-sm lg:text-base font-medium text-gray-900">No bank connections required</span>
+                  <p class="text-xs lg:text-sm text-gray-600 mt-1">Manual entry keeps you in control of your data</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 p-3 rounded-lg bg-white/50">
+                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <span class="text-sm lg:text-base font-medium text-gray-900">Works through email and calendar</span>
+                  <p class="text-xs lg:text-sm text-gray-600 mt-1">Integrates with tools you already use daily</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 p-3 rounded-lg bg-white/50">
+                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"></i>
+                <div>
+                  <span class="text-sm lg:text-base font-medium text-gray-900">Weekly check-ins, not daily micromanaging</span>
+                  <p class="text-xs lg:text-sm text-gray-600 mt-1">Encourages healthy financial habits without overwhelm</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer -->
+      <footer class="text-center mt-8 text-white/80">
+        <p class="text-sm">
+          &copy; 2025 Bills io
+        </p>
+        <p class="text-xs mt-2">
+          <a href="https://studioember.com" class="text-white/60 hover:text-white transition-colors underline">
+            studio ember
+          </a>
+        </p>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 
 </html>
